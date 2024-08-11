@@ -2,7 +2,7 @@ import Posts from "../models/postModel.js";
 
 export const getPosts = async (req, res) => {
   try {
-    const data = Posts.findAll();
+    const data = await Posts.findAll();
     res.status(200).json({
       status: "success",
       data: data,

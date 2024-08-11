@@ -4,7 +4,7 @@ import authMiddleware from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
-router.get("/post", authMiddleware, getPosts);
+router.get("/posts", getPosts);
 router.post("/posts");
 router.get("/posts/:id");
 router.delete("/posts/:id");

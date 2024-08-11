@@ -1,5 +1,6 @@
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
+import { isBlacklisted } from "../utils/blacklist.js";
 
 dotenv.config();
 
@@ -17,6 +18,10 @@ const authMiddleware = (req, res, next) => {
   }
 
   const token = authHeader.split(" ")[1];
+  if (isBlacklisted(token)) {
+    return res.status(403).json({ message: "Token is blacklisted" });
+  }
+
   try {
     const decoded = jwt.verify(token, jwtSecret);
     req.userId = decoded.userId; // Add the user ID to the request

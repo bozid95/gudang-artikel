@@ -9,7 +9,7 @@ const db = new Sequelize(
   {
     host: process.env.HOST,
     dialect: "mysql",
-    logging: true,
+    logging: false,
   }
 );
 
@@ -23,8 +23,8 @@ db.authenticate()
   });
 
 //generate table
-(async () => {
-  await db.sync({ alter: true, force: false });
-})();
+// (async () => {
+//   await db.sync({ alter: true, force: false });
+// })();
 
 export default db;
