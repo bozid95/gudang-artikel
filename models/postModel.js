@@ -14,7 +14,7 @@ const Posts = db.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    isPublish: {
+    is_publish: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
