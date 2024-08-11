@@ -1,6 +1,5 @@
 import { Sequelize } from "sequelize";
 import env from "dotenv";
-
 env.config();
 
 const db = new Sequelize(
@@ -10,7 +9,7 @@ const db = new Sequelize(
   {
     host: process.env.HOST,
     dialect: "mysql",
-    logging: true,
+    logging: false,
   }
 );
 
