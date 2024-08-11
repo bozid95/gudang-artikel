@@ -9,7 +9,7 @@ const db = new Sequelize(
   {
     host: process.env.HOST,
     dialect: "mysql",
-    logging: false,
+    logging: true,
   }
 );
 

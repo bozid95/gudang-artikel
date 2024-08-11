@@ -25,7 +25,7 @@ export const getUserById = async (req, res) => {
   }
 };
 export const createUser = async (req, res) => {
-  const { name, email, password, confirmPassword } = req.body;
+  const { name, username, email, password, confirmPassword } = req.body;
   const email_exist = await Users.findOne({ where: { email: email } });
   const hashPassword = bcrypt.hashSync(password, 10);
   if (email_exist)
@@ -36,13 +36,18 @@ export const createUser = async (req, res) => {
     return res.status(400).json({
       message: "Password doesnt match",
     });
-  if ({ name, email, password, confirmPassword } == null)
+  if ({ name, username, email, password, confirmPassword } == null)
     return res.status(400).json({
       message: "Please Fill the Fields",
+    });
+  if (password.length < 8)
+    return res.status(400).json({
+      message: "Password must be at least 8 characters",
     });
   try {
     await Users.create({
       name: name,
+      username: username,
       email: email,
       password: hashPassword,
     });
@@ -60,7 +65,12 @@ export const updateUser = async (req, res) => {
     return res.status(200).json({
       message: "User Not Found",
     });
-  const { name, email, password, confirmPassword } = req.body;
+  const { name, username, email, password, confirmPassword } = req.body;
+  if (password.length < 8) {
+    return res.status(400).json({
+      message: "Password must be at least 8 characters",
+    });
+  }
   let hashPassword;
   if (password === "" || password === null) {
     hashPassword === user.password;
@@ -75,6 +85,7 @@ export const updateUser = async (req, res) => {
     await Users.update(
       {
         name: name,
+        username: username,
         email: email,
         password: hashPassword,
       },
@@ -102,5 +113,3 @@ export const deleteUser = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
-
-

@@ -8,14 +8,14 @@ env.config();
 
 export const login = async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const { username, password } = req.body;
     // Input validation
-    if (!email || !password) {
+    if (!username || !password) {
       return res
         .status(400)
-        .json({ message: "Email and password are required" });
+        .json({ message: "username and password are required" });
     }
-    const user = await Users.findOne({ where: { email: email } });
+    const user = await Users.findOne({ where: { username: username } });
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
@@ -43,7 +43,7 @@ export const me = async (req, res) => {
     return res.status(401).json({ msg: "Unauthorized" });
   }
   const user = await Users.findOne({
-    attributes: ["id", "name", "email"],
+    attributes: ["id", "name", "email", "username"],
     where: {
       id: req.userId,
     },
@@ -51,8 +51,9 @@ export const me = async (req, res) => {
   if (!user) return res.status(404).json({ msg: "User not found" });
   const id = user.id;
   const name = user.name;
+  const username = user.username;
   const email = user.email;
-  res.status(200).json({ msg: "Authorized", id, name, email });
+  res.status(200).json({ msg: "Authorized", id, name, username, email });
 };
 
 export const logout = async (req, res) => {
