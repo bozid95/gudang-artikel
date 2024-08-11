@@ -137,3 +137,69 @@ export const searchPost = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+export const filterByCategory = async (req, res) => {
+  const { category } = req.query;
+  try {
+    const data = await Posts.findAll({
+      where: {
+        category_id: category,
+      },
+    });
+    res.status(200).json({
+      status: "success",
+      data: data,
+    });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+export const getPublishedPosts = async (req, res) => {
+  try {
+    const data = await Posts.findAll({
+      where: {
+        is_publish: true,
+      },
+    });
+    console.log(data);
+    res.status(200).json({
+      status: "success",
+      data: data,
+    });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+export const getDraftPosts = async (req, res) => {
+  try {
+    const data = await Posts.findAll({
+      where: {
+        is_publish: false,
+      },
+    });
+    console.log(data);
+    res.status(200).json({
+      status: "success",
+      data: data,
+    });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+export const paginatePosts = async (req, res) => {
+  const { page = 1, limit = 2 } = req.query;
+  try {
+    const data = await Posts.findAll({
+      offset: (page - 1) * limit,
+      limit: limit,
+    });
+    res.status(200).json({
+      status: "success",
+      data: data,
+    });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
