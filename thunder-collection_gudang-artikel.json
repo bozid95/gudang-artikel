@@ -1,0 +1,412 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "gudang-artikel",
+    "collectionId": "17788a15-288b-47d1-97b7-3ba55200012a",
+    "dateExported": "2024-08-11T17:18:40.984Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "247a4f4a-76fa-4088-9870-9d2a09e36882",
+            "name": "Category",
+            "containerId": "",
+            "created": "2024-08-11T05:31:11.630Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "f829c7f4-558e-47b5-a893-5220f5a06886",
+            "name": "Post",
+            "containerId": "",
+            "created": "2024-08-11T11:47:57.187Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "4ff906ee-ecbc-49ab-98cc-051165093f0c",
+            "colId": "17788a15-288b-47d1-97b7-3ba55200012a",
+            "containerId": "",
+            "name": "get all User",
+            "url": "http://localhost:4000/api/users",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-08-11T04:10:23.529Z",
+            "modified": "2024-08-11T17:07:22.154Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwLCJuYW1lIjoicmlzdGkgWVMiLCJpYXQiOjE3MjMzOTYwMjIsImV4cCI6MTcyMzM5OTYyMn0.mt8eJb4L2tVw-5DSleqB1M6Hcz_bxZGe9Le9Fo6kMGw"
+            }
+        },
+        {
+            "_id": "f55c2e9b-24e9-4f50-b5df-47f51946500a",
+            "colId": "17788a15-288b-47d1-97b7-3ba55200012a",
+            "containerId": "",
+            "name": "Create User",
+            "url": "http://localhost:4000/api/register",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-08-11T04:30:55.048Z",
+            "modified": "2024-08-11T17:14:10.761Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "\n{\n  \"name\"            : \"risti YS\",\n  \"username\"        : \"admina\",\n  \"email\"           : \"admina@admin.com\",\n  \"password\"        : \"12345678\",\n  \"confirmPassword\" : \"12345678\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "7646ebd6-b4f2-4652-ba51-5be503c7f421",
+            "colId": "17788a15-288b-47d1-97b7-3ba55200012a",
+            "containerId": "",
+            "name": "get User by ID",
+            "url": "http://localhost:4000/api/users/10",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-08-11T04:59:21.445Z",
+            "modified": "2024-08-11T17:07:35.061Z",
+            "headers": []
+        },
+        {
+            "_id": "d1d27009-dbfa-4bd0-ae5d-e7b1c10494d7",
+            "colId": "17788a15-288b-47d1-97b7-3ba55200012a",
+            "containerId": "",
+            "name": "get Me",
+            "url": "http://localhost:4000/api/me",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-08-11T12:01:10.139Z",
+            "modified": "2024-08-11T15:00:19.770Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsIm5hbWUiOiJXaWRvZG8iLCJpYXQiOjE3MjMzODgzNjcsImV4cCI6MTcyMzM5MTk2N30.jYE-EQOZMnu_7cNf-ZwZCtVF2NFBrA5SCF8uswAWQS8"
+            }
+        },
+        {
+            "_id": "6598bf61-bb1b-4244-bd8c-d681881c0b90",
+            "colId": "17788a15-288b-47d1-97b7-3ba55200012a",
+            "containerId": "",
+            "name": "delete User",
+            "url": "http://localhost:4000/api/users/6",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-08-11T05:01:33.845Z",
+            "modified": "2024-08-11T05:04:25.090Z",
+            "headers": []
+        },
+        {
+            "_id": "635ec50e-5d48-4da5-b554-c342caf89684",
+            "colId": "17788a15-288b-47d1-97b7-3ba55200012a",
+            "containerId": "",
+            "name": "Edit User",
+            "url": "http://localhost:4000/api/users/7",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-08-11T05:21:18.883Z",
+            "modified": "2024-08-11T05:30:08.425Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\" : \"risti YS\",\n  \"email\" : \"users@admin.com\",\n  \"password\" : \"\",\n  \"confirmPassword\" : \"\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "9c492bbb-71e8-4528-bfc1-282bd9db5c1e",
+            "colId": "17788a15-288b-47d1-97b7-3ba55200012a",
+            "containerId": "",
+            "name": "login",
+            "url": "http://localhost:4000/api/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-08-11T06:50:43.694Z",
+            "modified": "2024-08-11T17:07:02.359Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\" : \"RistYS\",\n  \"password\" : \"1234\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "78cdb1d8-f975-4de9-bc98-f46ede2e0a61",
+            "colId": "17788a15-288b-47d1-97b7-3ba55200012a",
+            "containerId": "",
+            "name": "logout",
+            "url": "http://localhost:4000/api/logout",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-08-11T12:33:43.971Z",
+            "modified": "2024-08-11T14:56:55.446Z",
+            "headers": [],
+            "auth": {
+                "type": "none"
+            }
+        },
+        {
+            "_id": "32254d7d-e7c4-4669-b5a1-c59dfba3b924",
+            "colId": "17788a15-288b-47d1-97b7-3ba55200012a",
+            "containerId": "247a4f4a-76fa-4088-9870-9d2a09e36882",
+            "name": "get All Category",
+            "url": "http://localhost:4000/api/category/",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-08-11T10:56:22.676Z",
+            "modified": "2024-08-11T16:14:42.310Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsIm5hbWUiOiJXaWRvZG8iLCJpYXQiOjE3MjMzOTI4NjgsImV4cCI6MTcyMzM5NjQ2OH0.QFzNzo_JZ4EPcIBqpYxCyDete4DWG5qF4IsHdBLq2FE"
+            }
+        },
+        {
+            "_id": "2136db6a-9d63-425b-ac55-45c810f033af",
+            "colId": "17788a15-288b-47d1-97b7-3ba55200012a",
+            "containerId": "f829c7f4-558e-47b5-a893-5220f5a06886",
+            "name": "get All Post",
+            "url": "http://localhost:4000/api/posts/",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-08-11T11:47:57.187Z",
+            "modified": "2024-08-11T15:42:19.979Z",
+            "headers": []
+        },
+        {
+            "_id": "dfafa493-723f-4d6c-a42d-e1365b5dc431",
+            "colId": "17788a15-288b-47d1-97b7-3ba55200012a",
+            "containerId": "247a4f4a-76fa-4088-9870-9d2a09e36882",
+            "name": "Create Category",
+            "url": "http://localhost:4000/api/category/",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-08-11T11:15:59.693Z",
+            "modified": "2024-08-11T11:46:12.839Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\" : \"News\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "c5e8ab46-3320-433d-87b5-cae35326a957",
+            "colId": "17788a15-288b-47d1-97b7-3ba55200012a",
+            "containerId": "247a4f4a-76fa-4088-9870-9d2a09e36882",
+            "name": "get Category By Id",
+            "url": "http://localhost:4000/api/category/1",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-08-11T11:24:21.980Z",
+            "modified": "2024-08-11T11:24:21.980Z",
+            "headers": []
+        },
+        {
+            "_id": "5f35c301-70e8-4f4f-8807-4965e30a1605",
+            "colId": "17788a15-288b-47d1-97b7-3ba55200012a",
+            "containerId": "f829c7f4-558e-47b5-a893-5220f5a06886",
+            "name": "Create Post",
+            "url": "http://localhost:4000/api/posts",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-08-11T11:47:57.188Z",
+            "modified": "2024-08-11T15:00:38.470Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\" : \"Judul\",\n  \"content\" : \"ini isi content\",\n  \"category\" : 1,\n  \"is_publish\" : \"true\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsIm5hbWUiOiJXaWRvZG8iLCJpYXQiOjE3MjMzODgzNjcsImV4cCI6MTcyMzM5MTk2N30.jYE-EQOZMnu_7cNf-ZwZCtVF2NFBrA5SCF8uswAWQS8"
+            }
+        },
+        {
+            "_id": "1da43d7a-cdc1-4d14-8039-69892c6b6bab",
+            "colId": "17788a15-288b-47d1-97b7-3ba55200012a",
+            "containerId": "f829c7f4-558e-47b5-a893-5220f5a06886",
+            "name": "get Post By Id",
+            "url": "http://localhost:4000/api/posts/7",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-08-11T11:47:57.189Z",
+            "modified": "2024-08-11T15:16:36.103Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsIm5hbWUiOiJXaWRvZG8iLCJpYXQiOjE3MjMzODgzNjcsImV4cCI6MTcyMzM5MTk2N30.jYE-EQOZMnu_7cNf-ZwZCtVF2NFBrA5SCF8uswAWQS8"
+            }
+        },
+        {
+            "_id": "1cddfa2f-901b-433a-a113-381fed24b96c",
+            "colId": "17788a15-288b-47d1-97b7-3ba55200012a",
+            "containerId": "f829c7f4-558e-47b5-a893-5220f5a06886",
+            "name": "search post",
+            "url": "http://localhost:4000/api/posts/search?q=edit",
+            "method": "GET",
+            "sortNum": 55000,
+            "created": "2024-08-11T15:38:13.185Z",
+            "modified": "2024-08-11T15:57:26.273Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "q",
+                    "value": "edit",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "56ee33b2-56ea-4c79-a611-6ec1f7fa6a82",
+            "colId": "17788a15-288b-47d1-97b7-3ba55200012a",
+            "containerId": "247a4f4a-76fa-4088-9870-9d2a09e36882",
+            "name": "Edit User",
+            "url": "http://localhost:4000/api/category/5",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2024-08-11T11:24:52.708Z",
+            "modified": "2024-08-11T11:32:26.732Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\" : \"Food\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "a9081e0d-7e0a-4ec4-b8d2-31cebb65c2f6",
+            "colId": "17788a15-288b-47d1-97b7-3ba55200012a",
+            "containerId": "f829c7f4-558e-47b5-a893-5220f5a06886",
+            "name": "Edit Post",
+            "url": "http://localhost:4000/api/posts/7",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2024-08-11T11:47:57.190Z",
+            "modified": "2024-08-11T15:23:57.494Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\" : \"ini judul edit\",\n  \"content\" : \"ini content deitt\",\n  \"category\" : 6,\n  \"is_publish\" : \"true\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsIm5hbWUiOiJXaWRvZG8iLCJpYXQiOjE3MjMzODgzNjcsImV4cCI6MTcyMzM5MTk2N30.jYE-EQOZMnu_7cNf-ZwZCtVF2NFBrA5SCF8uswAWQS8"
+            }
+        },
+        {
+            "_id": "2dca736b-f1f3-43a4-9634-6905777623d3",
+            "colId": "17788a15-288b-47d1-97b7-3ba55200012a",
+            "containerId": "f829c7f4-558e-47b5-a893-5220f5a06886",
+            "name": "paginate Post",
+            "url": "http://localhost:4000/api/posts/?page=3",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-08-11T16:39:39.416Z",
+            "modified": "2024-08-11T16:46:21.635Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "page",
+                    "value": "3",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsIm5hbWUiOiJXaWRvZG8iLCJpYXQiOjE3MjMzOTQ1NjUsImV4cCI6MTcyMzM5ODE2NX0.Br5Qh2wP0p7iamff4iHRkFikDDzBouXfrpI3QuZ2wcA"
+            }
+        },
+        {
+            "_id": "5ee4e970-ef82-43c8-a198-daa0696ed113",
+            "colId": "17788a15-288b-47d1-97b7-3ba55200012a",
+            "containerId": "f829c7f4-558e-47b5-a893-5220f5a06886",
+            "name": "filter by Category",
+            "url": "http://localhost:4000/api/posts/filter?category=1",
+            "method": "GET",
+            "sortNum": 65000,
+            "created": "2024-08-11T16:13:27.177Z",
+            "modified": "2024-08-11T16:17:22.806Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "category",
+                    "value": "1",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "8c02078d-99c6-44b4-b8c5-1d1d381a7005",
+            "colId": "17788a15-288b-47d1-97b7-3ba55200012a",
+            "containerId": "247a4f4a-76fa-4088-9870-9d2a09e36882",
+            "name": "delete Category",
+            "url": "http://localhost:4000/api/category/7",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2024-08-11T11:32:53.340Z",
+            "modified": "2024-08-11T11:45:37.084Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\" : \"Food\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "b1834bbd-9a19-43e3-8c94-a4ae5e816a9f",
+            "colId": "17788a15-288b-47d1-97b7-3ba55200012a",
+            "containerId": "f829c7f4-558e-47b5-a893-5220f5a06886",
+            "name": "delete Post",
+            "url": "http://localhost:4000/api/posts/1",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2024-08-11T11:47:57.191Z",
+            "modified": "2024-08-11T15:09:09.928Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsIm5hbWUiOiJXaWRvZG8iLCJpYXQiOjE3MjMzODgzNjcsImV4cCI6MTcyMzM5MTk2N30.jYE-EQOZMnu_7cNf-ZwZCtVF2NFBrA5SCF8uswAWQS8"
+            }
+        },
+        {
+            "_id": "49b6fa92-9157-45d0-b430-44d171613c1c",
+            "colId": "17788a15-288b-47d1-97b7-3ba55200012a",
+            "containerId": "f829c7f4-558e-47b5-a893-5220f5a06886",
+            "name": "filter by Publsih",
+            "url": "http://localhost:4000/api/posts/publish",
+            "method": "GET",
+            "sortNum": 75000,
+            "created": "2024-08-11T16:24:33.160Z",
+            "modified": "2024-08-11T16:33:22.218Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsIm5hbWUiOiJXaWRvZG8iLCJpYXQiOjE3MjMzOTM1MDcsImV4cCI6MTcyMzM5NzEwN30.YjyudArbXJLLWavxAawhSY7pw39W_-CkT1ZlfNffJ68"
+            }
+        },
+        {
+            "_id": "4f96c8df-9447-44d2-82b4-27c7a7a1848a",
+            "colId": "17788a15-288b-47d1-97b7-3ba55200012a",
+            "containerId": "f829c7f4-558e-47b5-a893-5220f5a06886",
+            "name": "get Draft Posts",
+            "url": "http://localhost:4000/api/posts/draft",
+            "method": "GET",
+            "sortNum": 85000,
+            "created": "2024-08-11T16:36:21.840Z",
+            "modified": "2024-08-11T16:36:44.511Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsIm5hbWUiOiJXaWRvZG8iLCJpYXQiOjE3MjMzOTM1MDcsImV4cCI6MTcyMzM5NzEwN30.YjyudArbXJLLWavxAawhSY7pw39W_-CkT1ZlfNffJ68"
+            }
+        }
+    ],
+    "settings": {
+        "auth": {
+            "type": "bearer",
+            "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjgsIm5hbWUiOiJyaXN0aSIsImlhdCI6MTcyMzM4MDk3MywiZXhwIjoxNzIzMzg0NTczfQ.e38qxt8aoak5FjoiP9GTim2gWObxK5C8opnTD9CtAEE"
+        }
+    },
+    "ref": "jYWfMHuAhIte3rkYPe14JJ1BljwXzI5jkcbHgoRdPKAnqHX-mSoVlbnsyl3pj9gAMNj4OVYtSUCFavvds9-8XA"
+}
